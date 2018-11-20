@@ -106,6 +106,7 @@ public abstract class BaseRecyclerAdapter<T> extends RecyclerView.Adapter<SmartV
         return this;
     }
 
+//
     public BaseRecyclerAdapter<T> loadMore(Collection<T> collection) {
         mList.addAll(collection);
         notifyDataSetChanged();

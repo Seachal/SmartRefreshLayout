@@ -32,6 +32,8 @@ import static android.support.v7.widget.DividerItemDecoration.VERTICAL;
 
 /**
  * 广告轮播-Banner
+ * <p>
+ * seachal annotation ： 此类使用了BaseRecyclerViewAdapterHelper
  */
 @SuppressWarnings("ALL")
 public class BannerPracticeActivity extends AppCompatActivity {
@@ -58,7 +60,8 @@ public class BannerPracticeActivity extends AppCompatActivity {
         recyclerView.addItemDecoration(new DividerItemDecoration(this, VERTICAL));
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(mAdapter);
-        final List<Movie> movies = new Gson().fromJson(JSON_MOVIES, new TypeToken<ArrayList<Movie>>() {}.getType());
+        final List<Movie> movies = new Gson().fromJson(JSON_MOVIES, new TypeToken<ArrayList<Movie>>() {
+        }.getType());
         mAdapter.replaceData(movies);
         refreshLayout.setOnRefreshListener(new OnRefreshListener() {
             @Override
@@ -67,12 +70,14 @@ public class BannerPracticeActivity extends AppCompatActivity {
                     @Override
                     public void run() {
                         if (mAdapter.getItemCount() < 2) {
-                            List<Movie> movies = new Gson().fromJson(JSON_MOVIES, new TypeToken<ArrayList<Movie>>() {}.getType());
+                            List<Movie> movies = new Gson().fromJson(JSON_MOVIES, new TypeToken<ArrayList<Movie>>() {
+                            }.getType());
+                            //替换数据
                             mAdapter.replaceData(movies);
                         }
                         refreshLayout.finishRefresh();
                     }
-                },2000);
+                }, 2000);
             }
         });
         refreshLayout.setOnLoadMoreListener(new OnLoadMoreListener() {
@@ -146,7 +151,7 @@ public class BannerPracticeActivity extends AppCompatActivity {
         }
     }
 
-    public static List<BannerItem> BANNER_ITEMS = new ArrayList<BannerItem>(){{
+    public static List<BannerItem> BANNER_ITEMS = new ArrayList<BannerItem>() {{
         add(new BannerItem("最后的骑士", R.mipmap.image_movie_header_48621499931969370));
         add(new BannerItem("三生三世十里桃花", R.mipmap.image_movie_header_12981501221820220));
         add(new BannerItem("豆福传", R.mipmap.image_movie_header_12231501221682438));

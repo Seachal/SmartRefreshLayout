@@ -7,6 +7,15 @@
     android:background="@color/colorBackgroundDark"
     tools:context="com.scwang.refreshlayout.activity.practice.WebViewPracticeActivity">
 
+    <!--
+    拖动Header的时候是否同时拖动内容（默认true）
+    app:srlEnableHeaderTranslationContent="false"
+    是否在编辑模式时显示预览效果（默认true）
+    app:srlEnablePreviewInEditMode
+    是否开启嵌套滚动NestedScrolling(默认false-智能开启)
+    app:srlEnableNestedScrolling
+
+    -->
     <com.scwang.smartrefresh.layout.SmartRefreshLayout
         android:id="@+id/refreshLayout"
         android:layout_width="match_parent"

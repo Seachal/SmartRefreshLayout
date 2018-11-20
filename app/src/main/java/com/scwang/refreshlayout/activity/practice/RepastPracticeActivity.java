@@ -50,11 +50,13 @@ public class RepastPracticeActivity extends AppCompatActivity {
         });
 
         final RefreshLayout refreshLayout = findViewById(R.id.refreshLayout);
+        //        //是否在全部加载结束之后Footer跟随内容1.0.4
         refreshLayout.setEnableFooterFollowWhenLoadFinished(true);
 
         //第一次进入演示刷新
         if (isFirstEnter) {
             isFirstEnter = false;
+            //            自动刷新
             refreshLayout.autoRefresh();
         }
 
@@ -74,17 +76,21 @@ public class RepastPracticeActivity extends AppCompatActivity {
                 }
             });
 
+            //            设置刷新和加载更多两个监听器
             refreshLayout.setOnRefreshLoadMoreListener(new OnRefreshLoadMoreListener() {
                 @Override
                 public void onRefresh(@NonNull final RefreshLayout refreshLayout) {
                     refreshLayout.getLayout().postDelayed(new Runnable() {
                         @Override
                         public void run() {
+                            mAdapter.notifyDataSetChanged();
+                            //   结束刷新
                             refreshLayout.finishRefresh();
                             refreshLayout.setNoMoreData(false);//恢复上拉状态
                         }
                     }, 2000);
                 }
+
                 @Override
                 public void onLoadMore(@NonNull final RefreshLayout refreshLayout) {
                     refreshLayout.getLayout().postDelayed(new Runnable() {
@@ -92,9 +98,11 @@ public class RepastPracticeActivity extends AppCompatActivity {
                         public void run() {
                             if (mAdapter.getCount() > 12) {
                                 Toast.makeText(getBaseContext(), "数据全部加载完毕", Toast.LENGTH_SHORT).show();
+                                // 完成加载并标记没有更多数据 1.0.4
                                 refreshLayout.finishLoadMoreWithNoMoreData();//设置之后，将不会再触发加载事件
                             } else {
                                 mAdapter.loadMore(loadModels());
+                                // 结束加载
                                 refreshLayout.finishLoadMore();
                             }
                         }

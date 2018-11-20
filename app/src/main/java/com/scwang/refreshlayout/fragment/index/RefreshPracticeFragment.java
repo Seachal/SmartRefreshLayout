@@ -43,6 +43,7 @@ import static android.support.v7.widget.DividerItemDecoration.VERTICAL;
 public class RefreshPracticeFragment extends Fragment implements AdapterView.OnItemClickListener {
 
     private enum Item {
+//        seachal annotation：枚举 Item的实例， 类似于new Item（）
         Repast(R.string.index_practice_repast, RepastPracticeActivity.class),
         Profile(R.string.index_practice_profile, ProfilePracticeActivity.class),
         WebView(R.string.index_practice_web_view, WebViewPracticeActivity.class),
