@@ -22,7 +22,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import static com.scwang.refreshlayout.R.layout.listitem_style_delivery;
+import static com.scwang.refreshlayout.R.layout.item_style_delivery;
 
 public class DeliveryStyleActivity extends AppCompatActivity implements AdapterView.OnItemClickListener {
 
@@ -79,7 +79,7 @@ public class DeliveryStyleActivity extends AppCompatActivity implements AdapterV
             List<Item> items = new ArrayList<>();
             items.addAll(Arrays.asList(Item.values()));
             items.addAll(Arrays.asList(Item.values()));
-            recyclerView.setAdapter(new BaseRecyclerAdapter<Item>(items, listitem_style_delivery,this) {
+            recyclerView.setAdapter(new BaseRecyclerAdapter<Item>(items, item_style_delivery,this) {
                 @Override
                 protected void onBindViewHolder(SmartViewHolder holder, Item model, int position) {
                 }
@@ -89,7 +89,7 @@ public class DeliveryStyleActivity extends AppCompatActivity implements AdapterV
 
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-        switch (Item.values()[position]) {
+        switch (Item.values()[position % Item.values().length]) {
             case 默认主题:
                 mToolbar.setBackgroundResource(android.R.color.white);
                 mToolbar.setTitleTextColor(0xffbbbbbb);

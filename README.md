@@ -2,18 +2,22 @@
 
 [![License](https://img.shields.io/badge/License%20-Apache%202-337ab7.svg)](https://www.apache.org/licenses/LICENSE-2.0)
 [![Arsenal](https://img.shields.io/badge/Arsenal%20-%20SmartRefresh-4cae4c.svg)](https://android-arsenal.com/details/1/6001)
-[![JCenter](https://img.shields.io/badge/%20JCenter%20-1.1.0-5bc0de.svg)](https://bintray.com/scwang90/maven/SmartRefreshLayout/_latestVersion)
+[![JCenter](https://img.shields.io/badge/%20JCenter%20-2.0.0-5bc0de.svg)](https://bintray.com/scwang90/maven/refresh-layout-kernel/_latestVersion)
 [![MinSdk](https://img.shields.io/badge/%20MinSdk%20-%2012%2B%20-f0ad4e.svg)](https://android-arsenal.com/api?level=12)
-[![Methods](https://img.shields.io/badge/Methods%20%7C%20Size%20-%20901%20%7C%20121%20KB-d9534f.svg)](http://www.methodscount.com/?lib=com.scwang.smartrefresh%3ASmartRefreshLayout%3A1.0.4)
+[![Methods](https://img.shields.io/badge/Methods%20%7C%20Size%20-%20784%20%7C%20121%20KB-d9534f.svg)](http://www.methodscount.com/?lib=com.scwang.smartrefresh%3ASmartRefreshLayout%3A1.0.4)
 
 <!-- [![Platform](https://img.shields.io/badge/Platform-Android-f0ad4e.svg)](https://www.android.com) -->
 <!-- [![Author](https://img.shields.io/badge/Author-scwang90-11bbff.svg)](https://github.com/scwang90) -->
 
 ## [English](https://github.com/scwang90/SmartRefreshLayout/blob/master/README_EN.md) | 中文
 
-正如名字所说，SmartRefreshLayout是一个“聪明”或者“智能”的下拉刷新布局，由于它的“智能”，它不只是支持所有的View，还支持多层嵌套的视图结构。它继承自ViewGroup 而不是FrameLayout或LinearLayout，提高了性能。
-也吸取了现在流行的各种刷新布局的优点，包括谷歌官方的 [SwipeRefreshLayout](https://developer.android.com/reference/android/support/v4/widget/SwipeRefreshLayout.html)，其他第三方的 [Ultra-Pull-To-Refresh](https://github.com/liaohuqiu/android-Ultra-Pull-To-Refresh)、[TwinklingRefreshLayout](https://github.com/lcodecorex/TwinklingRefreshLayout) 。还集成了各种炫酷的 Header 和 Footer。
-SmartRefreshLayout的目标是打造一个强大，稳定，成熟的下拉刷新框架，并集成各种的炫酷、多样、实用、美观的Header和Footer。
+SmartRefreshLayout以打造一个强大，稳定，成熟的下拉刷新框架为目标，并集成各种的炫酷、多样、实用、美观的Header和Footer。
+正如名字所说，SmartRefreshLayout是一个“聪明”或者“智能”的下拉刷新布局，由于它的“智能”，它不只是支持所有的View，还支持多层嵌套的视图结构。
+它继承自ViewGroup 而不是FrameLayout或LinearLayout，提高了性能。
+也吸取了现在流行的各种刷新布局的优点，包括谷歌官方的 [SwipeRefreshLayout](https://developer.android.com/reference/android/support/v4/widget/SwipeRefreshLayout.html)，
+其他第三方的 [Ultra-Pull-To-Refresh](https://github.com/liaohuqiu/android-Ultra-Pull-To-Refresh)、[TwinklingRefreshLayout](https://github.com/lcodecorex/TwinklingRefreshLayout) 。
+还集成了各种炫酷的 Header 和 Footer。
+
 
 ## 特点功能:
 
@@ -22,18 +26,23 @@ SmartRefreshLayout的目标是打造一个强大，稳定，成熟的下拉刷�
  - 支持嵌套多层的视图结构 Layout (LinearLayout,FrameLayout...)
  - 支持所有的 View（AbsListView、RecyclerView、WebView....View）
  - 支持自定义并且已经集成了很多炫酷的 Header 和 Footer.
- - 支持和ListView的无缝同步滚动 和 CoordinatorLayout 的嵌套滚动 .
+ - 支持和 ListView 的无缝同步滚动 和 CoordinatorLayout 的嵌套滚动 .
  - 支持自动刷新、自动上拉加载（自动检测列表惯性滚动到底部，而不用手动上拉）.
  - 支持自定义回弹动画的插值器，实现各种炫酷的动画效果.
- - 支持设置主题来适配任何场景的App，不会出现炫酷但很尴尬的情况.
+ - 支持设置主题来适配任何场景的 App，不会出现炫酷但很尴尬的情况.
  - 支持设多种滑动方式：平移、拉伸、背后固定、顶层固定、全屏
  - 支持所有可滚动视图的越界回弹
+ - 支持 Header 和 Footer 交换混用
+ - 支持 AndroidX
+ - 支持[横向刷新](https://github.com/scwang90/SmartRefreshHorizontal)
 
 ## 每天领红包
 
 最近开通了支付宝商家，生成了个红包二维码，经常用支付宝的童鞋可有扫码领优惠红包，扫码只会拿红包，不会有任何损失，每天都可以扫码哦！
 
-![支付宝红包](https://github.com/scwang90/SmartRefreshLayout/blob/master/art/pay_alipay_red_packet.png?raw=true)
+![支付宝红包](https://github.com/scwang90/MultiWaveHeader/blob/master/art/pay_alipay_red_packet.png?raw=true)
+
+> 你也可以在支付宝中直接搜索 **553866294** 来获取红包。如果得到的是花呗红包，也不用失望。如果你经常使用信用卡的话那么使用花呗红包非常适合你，它也和信用卡一样先消费后还款，关键是每天都能扫红包省钱！
 
 ## 传送门
 
@@ -100,46 +109,103 @@ SmartRefreshLayout的目标是打造一个强大，稳定，成熟的下拉刷�
 
 
 看到这么多炫酷的Header，是不是觉得很棒？这时你或许会担心这么多的Header集成在一起，但是平时只会用到一个，是不是要引入很多无用的代码和资源？
-请放心，我已经把刷新布局分成三个包啦，用到的时候自行引用就可以啦！
+V2.x 版本已经把依赖库拆分成8个包啦，用到的时候自行引用就可以啦！
 
- - SmartRefreshLayout 刷新布局核心实现，自带ClassicsHeader（经典）、BezierRadarHeader（贝塞尔雷达）两个 Header.
- - SmartRefreshHeader 各种Header的集成，除了Layout自带的Header，其它都在这个包中.
- - SmartRefreshFooter 各种Footer的集成，除了Layout自带的Footer，其它都在这个包中.
+ - refresh-layout-kernel        核心必须依赖
+ - refresh-header-classics      经典刷新头
+ - refresh-header-radar         雷达刷新头
+ - refresh-header-falsify       虚拟刷新头
+ - refresh-header-material      谷歌刷新头
+ - refresh-header-two-level     二级刷新头
+ - refresh-footer-ball          球脉冲加载
+ - refresh-footer-classics      经典加载
+
+<!-- V2.x 中对包名进行迁移，为了兼容 1.x 下面三个包依然保留，可以自行选择使用 -->
+
+ <!-- - SmartRefreshLayout 刷新布局核心实现，自带ClassicsHeader（经典）、BezierRadarHeader（贝塞尔雷达）两个 Header. -->
+ <!-- - SmartRefreshHeader 各种Header的集成，除了Layout自带的Header，其它都在这个包中. -->
+ <!-- - SmartRefreshFooter 各种Footer的集成，除了Layout自带的Footer，其它都在这个包中. -->
 
 ## 简单用例
 #### 1.在 build.gradle 中添加依赖
-```
-//1.1.0 API改动过大，老用户升级需谨慎
-compile 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.0-alpha-16'
-compile 'com.scwang.smartrefresh:SmartRefreshHeader:1.1.0-alpha-16'//没有使用特殊Header，可以不加这行
-compile 'com.android.support:appcompat-v7:25.3.1'//版本 23以上（必须）
 
-//1.0.5 当1.1.0出现问题可以回退到1.0.5.1
-compile 'com.scwang.smartrefresh:SmartRefreshLayout:1.0.5.1'
-compile 'com.scwang.smartrefresh:SmartRefreshHeader:1.0.5.1'//没有使用特殊Header，可以不加这行
-compile 'com.android.support:appcompat-v7:25.3.1'//版本 23以上（必须）
-compile 'com.android.support:design:25.3.1'//版本随意（非必须，引用可以解决无法预览问题）
+[【V1.1.0】](https://github.com/scwang90/SmartRefreshLayout/tree/1.x#%E7%AE%80%E5%8D%95%E7%94%A8%E4%BE%8B) 如果正在使用1.x 版本请调转，当前2.0 版本已经重定制，不支持升级，请在新项目中使用。
+
+V2.x 相对于 V1.x 对包名做了修改如：com.scwang.smartrefresh 改为 com.scwang.smart.refresh。
+建议在新项目中使用，如果项目升级，java，xml 中都需要做包名替换，比较麻烦。
+但主要改动还是对 Smart 进行分包，减小不必要的依赖，比如不使用二级刷新就不依赖，避免代码冗余。
+但是未对 SmartRefreshHeader 分包，里面有十多个Header，建议需要使用哪个就复制哪个的源码到项目中。
+当然：大家也可以在讨论区讨论投票，选出里面使用频率比较高的Header，然后单独分离出来。
+
 ```
+compile 'com.android.support:appcompat-v7:25.3.1'                   //必须 25.3.1 以上
+
+// 注意：分包之后不会有默认的Header和Footer需要手动添加！还是原来的三种方法！
+implementation  'com.scwang.smart:refresh-layout-kernel:2.0.1'      //核心必须依赖
+implementation  'com.scwang.smart:refresh-header-classics:2.0.1'    //经典刷新头
+implementation  'com.scwang.smart:refresh-header-radar:2.0.1'       //雷达刷新头
+implementation  'com.scwang.smart:refresh-header-falsify:2.0.1'     //虚拟刷新头
+implementation  'com.scwang.smart:refresh-header-material:2.0.1'    //谷歌刷新头
+implementation  'com.scwang.smart:refresh-header-two-level:2.0.1'   //二级刷新头
+implementation  'com.scwang.smart:refresh-footer-ball:2.0.1'        //球脉冲加载
+implementation  'com.scwang.smart:refresh-footer-classics:2.0.1'    //经典加载
+
+
+```
+
+如果使用 AndroidX 需要依赖 androidx.appcompat
+
+```
+    implementation 'androidx.appcompat:appcompat:1.0.0'                 //必须 1.0.0 以上
+
+    implementation  'com.scwang.smart:refresh-layout-kernel:2.0.1'      //核心必须依赖
+    implementation  'com.scwang.smart:refresh-header-classics:2.0.1'    //经典刷新头
+    implementation  'com.scwang.smart:refresh-header-radar:2.0.1'       //雷达刷新头
+    implementation  'com.scwang.smart:refresh-header-falsify:2.0.1'     //虚拟刷新头
+    implementation  'com.scwang.smart:refresh-header-material:2.0.1'    //谷歌刷新头
+    implementation  'com.scwang.smart:refresh-header-two-level:2.0.1'   //二级刷新头
+    implementation  'com.scwang.smart:refresh-footer-ball:2.0.1'        //球脉冲加载
+    implementation  'com.scwang.smart:refresh-footer-classics:2.0.1'    //经典加载
+
+```
+
+并在 gradle.properties 中添加
+
+```
+android.useAndroidX=true
+android.enableJetifier=true
+
+```
+
+
 
 #### 2.在XML布局文件中添加 SmartRefreshLayout
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
-<com.scwang.smartrefresh.layout.SmartRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.scwang.smart.refresh.layout.SmartRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/refreshLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+    <com.scwang.smart.refresh.header.ClassicsHeader
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:overScrollMode="never"
         android:background="#fff" />
-</com.scwang.smartrefresh.layout.SmartRefreshLayout>
+    <com.scwang.smart.refresh.footer.ClassicsFooter
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</com.scwang.smart.refresh.layout.SmartRefreshLayout>
 ```
 
 #### 3.在 Activity 或者 Fragment 中添加代码
 ```java
 RefreshLayout refreshLayout = (RefreshLayout)findViewById(R.id.refreshLayout);
+refreshLayout.setRefreshHeader(new ClassicsHeader(this));
+refreshLayout.setRefreshFooter(new ClassicsFooter(this));
 refreshLayout.setOnRefreshListener(new OnRefreshListener() {
     @Override
     public void onRefresh(RefreshLayout refreshlayout) {
@@ -186,7 +252,7 @@ public class App extends Application {
 
 #### 2.方法二 XML布局文件指定
 ```xml
-<com.scwang.smartrefresh.layout.SmartRefreshLayout
+<com.scwang.smart.refresh.layout.SmartRefreshLayout
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/refreshLayout"
     android:layout_width="match_parent"
@@ -197,19 +263,19 @@ public class App extends Application {
     app:srlEnablePreviewInEditMode="true">
     <!--srlAccentColor srlPrimaryColor 将会改变 Header 和 Footer 的主题颜色-->
     <!--srlEnablePreviewInEditMode 可以开启和关闭预览功能-->
-    <com.scwang.smartrefresh.layout.header.ClassicsHeader
+    <com.scwang.smart.refresh.header.ClassicsHeader
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:padding="@dimen/padding_common"
+        android:padding="@dimen/dimenPaddingCommon"
         android:background="@android:color/white"
         android:text="@string/description_define_in_xml"/>
-    <com.scwang.smartrefresh.layout.footer.ClassicsFooter
+    <com.scwang.smart.refresh.footer.ClassicsFooter
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
-</com.scwang.smartrefresh.layout.SmartRefreshLayout>
+</com.scwang.smart.refresh.layout.SmartRefreshLayout>
 ```
 
 注意：方法二 XML设置的Header和Footer的优先级是中等的，会被方法三覆盖。而且使用本方法的时候，Android Studio 会有预览效果，如下图：
@@ -235,7 +301,7 @@ refreshLayout.setRefreshFooter(new BallPulseFooter(this).setSpinnerStyle(Spinner
 
 ## 混淆
 
-SmartRefreshLayout 没有使用到：序列化、反序列化、JNI、反射，所以并不需要添加混淆过滤代码，并且已经混淆测试通过，如果你在项目的使用中混淆之后出现问题，请及时通知我。
+SmartRefreshLayout 不需要添加混淆过滤代码，并且已经混淆测试通过，如果你在项目的使用中混淆之后出现问题，请及时通知我。
 
 ## 赞赏
 
@@ -244,10 +310,16 @@ SmartRefreshLayout 没有使用到：序列化、反序列化、JNI、反射，�
 
 ![](https://github.com/scwang90/SmartRefreshLayout/blob/master/art/pay_alipay.jpg?raw=true) ![](https://github.com/scwang90/SmartRefreshLayout/blob/master/art/pay_wxpay.jpg?raw=true) ![](https://github.com/scwang90/SmartRefreshLayout/blob/master/art/pay_tencent.jpg?raw=true)
 
+> 如果希望捐赠之后能获得相关的帮助，可以选择加入下面的付费群来取代普通捐赠，付费群可以直接获得作者的直接帮助，与问题反馈。
+
 如果在捐赠留言中备注名称，将会被记录到列表中~ 如果你也是github开源作者，捐赠时可以留下github项目地址或者个人主页地址，链接将会被添加到列表中起到互相推广的作用
 [捐赠列表](https://github.com/scwang90/SmartRefreshLayout/blob/master/art/md_donationlist.md)
 
 #### 友情链接
+[github/Loror](https://github.com/Loror)  
+[github/faith-hb/WidgetCase](https://github.com/faith-hb/WidgetCase)  
+[github/Bamboy120315/Freedom](https://github.com/Bamboy120315/Freedom)  
+[github/TommyLemon/APIJSON](https://github.com/TommyLemon/APIJSON)  
 [github/dengyuhan](https://github.com/dengyuhan)  
 [github/zrp2017](https://github.com/zrp2017)  
 [github/fly803/BaseProject](https://github.com/fly803/BaseProject)  
@@ -259,7 +331,7 @@ SmartRefreshLayout 没有使用到：序列化、反序列化、JNI、反射，�
 [github/addappcn](https://github.com/addappcn)  
 [github/RainliFu](https://github.com/RainliFu)  
 [github/sugarya](https://github.com/sugarya)  
-[github/stormzhang](https://github.com/stormzhang)
+[github/stormzhang](https://github.com/stormzhang)  
 
 ## 讨论
 
@@ -284,7 +356,8 @@ SmartRefreshLayout 没有使用到：序列化、反序列化、JNI、反射，�
 
 ## 其他作品
 [MultiWaveHeader](https://github.com/scwang90/MultiWaveHeader)  
-[诗和远方](http://android.myapp.com/myapp/detail.htm?apkName=com.poetry.kernel)
+[SmartRefreshHorizontal](https://github.com/scwang90/SmartRefreshHorizontal)  
+[诗和远方](http://android.myapp.com/myapp/detail.htm?apkName=com.poetry.kernel)  
 
 ## 感谢
 [SwipeRefreshLayout](https://developer.android.com/reference/android/support/v4/widget/SwipeRefreshLayout.html)  

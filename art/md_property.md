@@ -57,6 +57,8 @@ public class RefreshActivity extends Activity {
 
         refreshLayout.autoRefresh();//自动刷新
         refreshLayout.autoLoadMore();//自动加载
+        refreshLayout.autoRefreshAnimationOnly();//自动刷新，只显示动画不执行刷新
+        refreshLayout.autoLoadMoreAnimationOnly();//自动加载，只显示动画不执行加载
         refreshLayout.autoRefresh(400);//延迟400毫秒后自动刷新
         refreshLayout.autoLoadMore(400);//延迟400毫秒后自动加载
         refreshLayout.finishRefresh();//结束刷新
@@ -105,7 +107,7 @@ public class App extends Application {
 xml代码设置
 ~~~xml
 <!-- 下面示例中的值等于默认值 -->
-<com.scwang.smartrefresh.layout.SmartRefreshLayout
+<com.scwang.smart.refresh.layout.SmartRefreshLayout
     android:id="@+id/refreshLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -221,8 +223,8 @@ public class RefreshActivity extends Activity {
 xml代码设置
 ~~~xml
 <!-- 下面示例中的值等于默认值 -->
-<com.scwang.smartrefresh.layout.SmartRefreshLayout>
-    <com.scwang.smartrefresh.layout.header.ClassicsHeader
+<com.scwang.smart.refresh.layout.SmartRefreshLayout>
+    <com.scwang.smart.refresh.footer.ClassicsHeader
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:srlAccentColor="@android:color/white"
@@ -238,8 +240,16 @@ xml代码设置
         app:srlDrawableMarginRight="20dp"
         app:srlDrawableArrow="@drawable/ic_arrow"
         app:srlDrawableProgress="@drawable/ic_progress"
-        app:srlClassicsSpinnerStyle="Translate"/>
-</com.scwang.smartrefresh.layout.SmartRefreshLayout>
+        app:srlClassicsSpinnerStyle="Translate"
+        app:srlTextPulling="@string/srl_header_pulling"
+        app:srlTextLoading="@string/srl_header_loading"
+        app:srlTextRelease="@string/srl_header_release"
+        app:srlTextFinish="@string/srl_header_finish"
+        app:srlTextFailed="@string/srl_header_failed"
+        app:srlTextUpdate="@string/srl_header_update"
+        app:srlTextSecondary="@string/srl_header_secondary"
+        app:srlTextRefreshing="@string/srl_header_refreshing"/>
+</com.scwang.smart.refresh.layout.SmartRefreshLayout>
 ~~~
 
 
@@ -294,8 +304,8 @@ public class RefreshActivity extends Activity {
 xml代码设置
 ~~~xml
 <!-- 下面示例中的值等于默认值 -->
-<com.scwang.smartrefresh.layout.SmartRefreshLayout>
-    <com.scwang.smartrefresh.layout.header.ClassicsFooter
+<com.scwang.smart.refresh.layout.SmartRefreshLayout>
+    <com.scwang.smart.refresh.footer.ClassicsFooter
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:srlAccentColor="@android:color/white"
@@ -308,8 +318,15 @@ xml代码设置
         app:srlDrawableMarginRight="20dp"
         app:srlDrawableArrow="@drawable/ic_arrow"
         app:srlDrawableProgress="@drawable/ic_progress"
-        app:srlClassicsSpinnerStyle="Translate"/>
-</com.scwang.smartrefresh.layout.SmartRefreshLayout>
+        app:srlClassicsSpinnerStyle="Translate"
+        app:srlTextPulling="@string/srl_footer_pulling"
+        app:srlTextRelease="@string/srl_footer_release"
+        app:srlTextLoading="@string/srl_footer_loading"
+        app:srlTextRefreshing="@string/srl_footer_refreshing"
+        app:srlTextFinish="@string/srl_footer_finish"
+        app:srlTextFailed="@string/srl_footer_failed"
+        app:srlTextNothing="@string/srl_footer_nothing"/>
+</com.scwang.smart.refresh.layout.SmartRefreshLayout>
 ~~~
 
 
@@ -411,6 +428,8 @@ xml代码设置
 |isLoading|boolean|(V1.1.0删除，版本用 getState==Loading 代替)|
 |autoRefresh|(int delayed)|触发自动刷新|
 |autoLoadMore|(int delayed)|触发自动加载|
+|autoRefreshAnimationOnly| |触发自动刷新，只显示动画不执行刷新 |
+|autoLoadMoreAnimationOnly| |触发自动加载，只显示动画不执行加载  |
 
 ## Header-Attributes
 

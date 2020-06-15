@@ -39,7 +39,7 @@ public class AssignCodeExampleActivity extends AppCompatActivity {
         //设置 Header 为 Material风格
         refreshLayout.setRefreshHeader(new MaterialHeader(this).setShowBezierWave(true));
         //设置 Footer 为 球脉冲
-        refreshLayout.setRefreshFooter(new BallPulseFooter(this).setSpinnerStyle(SpinnerStyle.Scale));
+        refreshLayout.setRefreshFooter(new BallPulseFooter(this).setSpinnerStyle(SpinnerStyle.FixedBehind));
 
         /*
          * 以下代码仅仅为了演示效果而已，不是必须的
@@ -50,7 +50,7 @@ public class AssignCodeExampleActivity extends AppCompatActivity {
         if (isFirstEnter) {
             isFirstEnter = false;
 //            //触发上拉加载
-//            refreshLayout.autoLoadMore(250, 250, 1.5f);
+//            mRefreshLayout.autoLoadMore(250, 250, 1.5f);
             //通过多功能监听接口实现 在第一次加载完成之后 自动刷新
             refreshLayout.setOnMultiPurposeListener(new SimpleMultiPurposeListener(){
                 @Override
