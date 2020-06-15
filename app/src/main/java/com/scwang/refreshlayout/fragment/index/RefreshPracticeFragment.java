@@ -30,6 +30,7 @@ import com.scwang.refreshlayout.adapter.BaseRecyclerAdapter;
 import com.scwang.refreshlayout.adapter.SmartViewHolder;
 import com.scwang.refreshlayout.fragment.practice.SecondFloorPracticeFragment;
 import com.scwang.refreshlayout.util.StatusBarUtil;
+import com.scwang.smartrefresh.layout.SmartRefreshLayout;
 
 import java.util.Arrays;
 
@@ -64,6 +65,7 @@ public class RefreshPracticeFragment extends Fragment implements AdapterView.OnI
 
     }
 
+
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         return inflater.inflate(R.layout.fragment_refresh_practive, container, false);
@@ -73,6 +75,10 @@ public class RefreshPracticeFragment extends Fragment implements AdapterView.OnI
     public void onViewCreated(@NonNull View root, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(root, savedInstanceState);
         StatusBarUtil.setPaddingSmart(getContext(), root.findViewById(R.id.toolbar));
+
+         SmartRefreshLayout refreshLayout = root.findViewById(R.id.refreshLayout);
+//        不启用下拉刷新
+         refreshLayout.setEnableRefresh(true);
 
         View view = root.findViewById(R.id.recyclerView);
         if (view instanceof RecyclerView) {
@@ -91,6 +97,14 @@ public class RefreshPracticeFragment extends Fragment implements AdapterView.OnI
         }
     }
 
+    /**
+     *
+     * RecyclerView 的 item 点击事件
+     * @param parent
+     * @param view
+     * @param position
+     * @param id
+     */
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
         Item item = Item.values()[position];

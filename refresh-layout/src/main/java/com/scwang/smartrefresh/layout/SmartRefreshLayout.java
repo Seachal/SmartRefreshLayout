@@ -3304,4 +3304,5 @@ public class SmartRefreshLayout extends ViewGroup implements RefreshLayout, Nest
     }
 
     //</editor-fold>
+
 }
