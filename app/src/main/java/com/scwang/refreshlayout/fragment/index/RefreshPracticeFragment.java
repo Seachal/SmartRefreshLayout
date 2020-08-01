@@ -31,7 +31,7 @@ import com.scwang.refreshlayout.adapter.SmartViewHolder;
 import com.scwang.refreshlayout.fragment.practice.InstantPracticeFragment;
 import com.scwang.refreshlayout.fragment.practice.SecondFloorPracticeFragment;
 import com.scwang.refreshlayout.util.StatusBarUtil;
-import com.scwang.smartrefresh.layout.SmartRefreshLayout;
+import com.scwang.smart.refresh.layout.SmartRefreshLayout;
 
 import java.util.Arrays;
 
