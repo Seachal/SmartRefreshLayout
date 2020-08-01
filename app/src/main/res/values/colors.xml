@@ -13,4 +13,12 @@
     <color name="colorBackgroundDark">#f2f2f2</color>
     <color name="colorDivision">#33aaaaaa</color>
 
+
+
+    <color name="colorWhite_1">#e0000000</color>
+    <color name="colorWhite_2">#00FFFFFF</color>
+    <color name="colorWhite_3">#ff000000</color>
+
+
+
 </resources>

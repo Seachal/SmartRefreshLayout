@@ -13,6 +13,8 @@
         app:navigationIcon="?attr/homeAsUpIndicator"
         app:title="@string/title_activity_style_classics"/>
 
+
+
     <com.scwang.smartrefresh.layout.SmartRefreshLayout
         android:id="@+id/refreshLayout"
         android:layout_width="match_parent"

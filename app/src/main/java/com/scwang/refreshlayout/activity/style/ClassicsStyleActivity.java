@@ -52,6 +52,7 @@ public class ClassicsStyleActivity extends AppCompatActivity implements AdapterV
         红色主题(R.string.item_style_theme_red_abstract),
         绿色主题(R.string.item_style_theme_green_abstract),
         蓝色主题(R.string.item_style_theme_blue_abstract),
+        白色透明主体(R.string.item_style_theme_blue_abstract),
         ;
         public int nameId;
         Item(@StringRes int nameId) {
@@ -69,7 +70,7 @@ public class ClassicsStyleActivity extends AppCompatActivity implements AdapterV
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_style_classics);
+        setContentView(R.layout.activity_style_classics_sc);
 
         mToolbar = findViewById(R.id.toolbar);
         mToolbar.setNavigationOnClickListener(new View.OnClickListener() {
@@ -171,6 +172,10 @@ public class ClassicsStyleActivity extends AppCompatActivity implements AdapterV
                 break;
             case 橙色主题:
                 setThemeColor(android.R.color.holo_orange_light, android.R.color.holo_orange_dark);
+                break;
+//                应用背景，  很多刷新，是需要显示下面的背景图的，不然显示一个白色的刷新块也不美观。
+            case 白色透明主体:
+                setThemeColor(R.color.colorWhite_2, R.color.colorWhite_2);
                 break;
 //            case 加载更多:
 //                mRefreshLayout.autoLoadMore();
