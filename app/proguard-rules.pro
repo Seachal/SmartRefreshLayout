@@ -37,3 +37,8 @@
 -keep class com.wang.avi.indicators.** { *; }
 
 -keep class com.scwang.refreshlayout.activity.practice.BannerPracticeActivity$Movie {*;}
+
+# bugly  混淆 start
+-dontwarn com.tencent.bugly.**
+-keep public class com.tencent.bugly.**{*;}
+# bugly 混淆 end

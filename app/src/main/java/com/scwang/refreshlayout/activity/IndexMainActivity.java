@@ -91,6 +91,8 @@ public class IndexMainActivity extends AppCompatActivity implements OnNavigation
 
         //状态栏透明和间距处理
         StatusBarUtil.immersive(this, 0xff000000, 0.1f);
+
+
     }
 
     @Override

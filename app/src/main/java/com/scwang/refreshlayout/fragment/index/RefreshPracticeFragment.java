@@ -12,6 +12,7 @@ import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -32,6 +33,7 @@ import com.scwang.refreshlayout.fragment.practice.InstantPracticeFragment;
 import com.scwang.refreshlayout.fragment.practice.SecondFloorPracticeFragment;
 import com.scwang.refreshlayout.util.StatusBarUtil;
 import com.scwang.smart.refresh.layout.SmartRefreshLayout;
+import com.tencent.bugly.crashreport.CrashReport;
 
 import java.util.Arrays;
 
@@ -109,6 +111,38 @@ public class RefreshPracticeFragment extends Fragment implements AdapterView.OnI
      */
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+        if (position ==1){
+            Log.i("bugly seachal",1+"");
+            CrashReport.testJavaCrash();
+        }
+        if (position ==2 ){
+            Log.i("bugly seachal",2+"");
+            try {
+                int i = 3;
+                int result = i/0;
+                Log.i("bugly seachal",result+"");
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+
+        if (position ==3 ){
+            Log.i("bugly seachal",3+"");
+            try {
+                int i = 3;
+                int result = i/0;
+                Log.i("bugly seachal",result+"");
+            } catch (Exception e) {
+
+            }
+        }
+
+        if (position == 4 ){
+            Log.i("bugly seachal",4+"");
+            int i = 3;
+            int result = i/0;
+            Log.i("bugly seachal",result+"");
+        }
         Item item = Item.values()[position];
         if (Activity.class.isAssignableFrom(item.clazz)) {
             startActivity(new Intent(getContext(), item.clazz));
